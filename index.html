@@ -457,7 +457,7 @@ function showToast(message, type){
       سياسات RLS أعلاه تسمح بالقراءة والكتابة للجميع حالياً (بنفس مستوى الثقة الحالي عبر رمز الأدمن)،
       وهذا قابل للتشديد لاحقاً بإضافة نظام تسجيل دخول حقيقي (Supabase Auth) إن احتجت ذلك مستقبلاً. */
 const SUPABASE_URL = 'https://oropzvhurtnfhubfrkoc.supabase.co';
-const SUPABASE_ANON_KEY = 'PASTE_YOUR_SUPABASE_ANON_PUBLIC_KEY_HERE';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9yb3B6dmh1cnRuZmh1YmZya29jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgxMDc2NzksImV4cCI6MjEwMzY4MzY3OX0.BOUbPkVknBpyphEEemylcG-1e855jQ6jsAjbgamc8Q4';
 
 const hasStorage = !!(SUPABASE_URL && SUPABASE_ANON_KEY && SUPABASE_ANON_KEY.indexOf('PASTE_') !== 0);
 async function storageGet(key, shared){
@@ -491,7 +491,7 @@ function submissionKey(year, monthValue, facilityKey){ return `sub:${year}:${mon
 
 /* ============ ADMIN GATE ============
    تحقق بسيط من جهة العميل فقط لمنع الوصول العرضي للوحة المؤشرات، وليس نظام حسابات حقيقياً. */
-const ADMIN_PASSCODE = 'CHANGE_THIS_ADMIN_PASSCODE';
+const ADMIN_PASSCODE = 'thelife';
 let isAdminAuthed = false;
 let adminView = 'report'; // 'report' | 'fields'
 
